@@ -1,9 +1,11 @@
 # W5100S-EVB-PICO-WORKINGASSISTANT
 
 ## 1. Project Overview
-This is a work assistance project utilizing W5100S-EVB-PICO and Arducam.
+- This is a work assistance project utilizing W5100S-EVB-PICO and Arducam.
 
 ## 2. Project Details
+- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/9a0a3ad1-617e-4dc0-a56c-05decbe11588)
+
 - The project involves capturing images every 5 seconds through a camera connected to Pico and transmitting them via ethernet.
   
 - The transmitted images are processed using a Fine-tuned YOLOv8 model to perform object detection on the user's work status. The model is trained to recognize six classes: Normal, Drowsiness, Yawning, Distraction, and Mobile usage.
@@ -19,10 +21,10 @@ This is a work assistance project utilizing W5100S-EVB-PICO and Arducam.
 
 - We used the Bundle for Version 7.x of the CircuitPython libraries, and for the Adafruit_CircuitPython_wiznet5k library, we used the 1.12.15 release version.
 
-Download links:
-- [CircuitPython Libraries](https://circuitpython.org/libraries)
-- [ArduCAM PICO_SPI_CAM Python](https://github.com/ArduCAM/PICO_SPI_CAM/tree/master/Python)
-- [Adafruit_CircuitPython_Wiznet5k 1.12.15](https://github.com/adafruit/Adafruit_CircuitPython_Wiznet5k/releases/tag/1.12.15)
+- Download links:
+  - [CircuitPython Libraries](https://circuitpython.org/libraries)
+  - [ArduCAM PICO_SPI_CAM Python](https://github.com/ArduCAM/PICO_SPI_CAM/tree/master/Python)
+  - [Adafruit_CircuitPython_Wiznet5k 1.12.15](https://github.com/adafruit/Adafruit_CircuitPython_Wiznet5k/releases/tag/1.12.15)
 
 - The code from the previous project [Upscaling Image with AI using W5100S-EVB-PICO and Arducam](https://maker.wiznet.io/Benjamin/projects/upscaling-image-with-ai-using-w5100s-evb-pico-and-arducam/) was refined and simplified using ChatGPT.
 
@@ -63,8 +65,11 @@ pip install ultralytics
 - We utilized the free GPU provided by Google Colab.
 
 - [Google Colab Notebook](https://colab.research.google.com/drive/1NStVVPItzzwoeldfsPJ-geZATkirvg2z?usp=sharing).
+-  ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/7ddcfc63-1f3b-4953-b7aa-3bac7163973c)
 
-- Inference: ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/1ce25d84-259e-40f8-9236-a4ff644a181e)
+
+- Inference:
+    ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/1ce25d84-259e-40f8-9236-a4ff644a181e)
 
 
 ## 5. Original Link
