@@ -4,7 +4,7 @@
 - This is a work assistance project utilizing W5100S-EVB-PICO and Arducam.
 
 ## 2. Project Details
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/689e8eb8-cade-4f04-a20e-ddaa7af0697f)
+- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/788417cc-49a0-4f28-963a-34f0f4e882f8)
 
 - The project involves capturing images every 5 seconds through a camera connected to Pico and transmitting them via ethernet.
   
@@ -43,21 +43,22 @@
 
 ## 4. YOLOv8 Model Training
 
-![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/13861027-142c-4fab-993a-ee066d88405d)
+![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/7f2dba5b-8f52-4f08-9a78-2938fdc7f019)
 
   
 ### YOLOv8 Model
 
 YOLOv8 is a powerful object detection model. It is the latest iteration in the YOLO series of models. YOLOv8 is designed to be fast and accurate, with a focus on simultaneous detection and classification. It is capable of detecting multiple objects in an image or video and classifying them in real-time, making it highly effective for many computer vision tasks.
 
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/493d763f-3c68-47b7-ab90-aafeb746727b)
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/3d38b116-25a2-4a91-919e-d732f3653881)
+![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/b1ab1840-8d85-4696-a608-c5fdc40391e9)
+![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/563a0ce1-6066-4ca5-bbdb-18135bf5867c)
 
 ### Nano Model
 
 The Nano model is a smaller and faster version of the standard model. It is designed for efficiency and can run at higher speeds with less computational resources, making it ideal for deployment on devices with limited computational power such as mobile devices and embedded systems.
 
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/4bb2e3d2-1e41-4d16-9634-c98fe59599a7)
+![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/eff6e427-e6ba-4436-9f5e-f4d2977b25b7)
+
 
 ### Usage
 
@@ -69,7 +70,7 @@ pip install ultralytics
 
 
 - Dataset: [Roboflow Project](https://universe.roboflow.com/project-q3daq/working-0iym3)
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/45899134-3630-4fc8-9e7a-f174cf524355)
+- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/7526f637-6764-4776-a394-2b3d18c83998)
 
 - Model: Ultralytics's YOLOv8 Nano (fast and small)
 
@@ -78,11 +79,11 @@ pip install ultralytics
 - We utilized the free GPU provided by Google Colab.
 
 - [Google Colab Notebook](https://colab.research.google.com/drive/1NStVVPItzzwoeldfsPJ-geZATkirvg2z?usp=sharing).
--  ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/7ddcfc63-1f3b-4953-b7aa-3bac7163973c)
+-  ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/10c8bd61-b793-4250-8ee5-d76d19b546f6)
 
 
 - Inference:
-    ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/1ce25d84-259e-40f8-9236-a4ff644a181e)
+    ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/222d69d4-718c-46d8-a8c2-1bcb32ed4480)
 
 ## 5. Inference to Web
 - Run the `working_assistant.py` file.
