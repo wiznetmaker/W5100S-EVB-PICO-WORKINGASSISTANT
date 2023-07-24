@@ -4,11 +4,11 @@
 - This is a work assistance project utilizing W5100S-EVB-PICO and Arducam.
 
 ## 2. Project Details
-- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/9a0a3ad1-617e-4dc0-a56c-05decbe11588)
+- ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/689e8eb8-cade-4f04-a20e-ddaa7af0697f)
 
 - The project involves capturing images every 5 seconds through a camera connected to Pico and transmitting them via ethernet.
   
-- The transmitted images are processed using a Fine-tuned YOLOv8 model to perform object detection on the user's work status. The model is trained to recognize six classes: Normal, Drowsiness, Yawning, Distraction, and Mobile usage.
+- The transmitted images are processed using a Fine-tuned YOLOv8 model to perform object detection on the user's work status. The model is trained to recognize five classes: Normal, Drowsiness, Yawning , Distraction, and Mobile usage.
   
 - The recognized objects are counted to analyze work patterns, and the results are transmitted and displayed on a web interface.
 
@@ -27,6 +27,19 @@
   - [Adafruit_CircuitPython_Wiznet5k 1.12.15](https://github.com/adafruit/Adafruit_CircuitPython_Wiznet5k/releases/tag/1.12.15)
 
 - The code from the previous project [Upscaling Image with AI using W5100S-EVB-PICO and Arducam](https://maker.wiznet.io/Benjamin/projects/upscaling-image-with-ai-using-w5100s-evb-pico-and-arducam/) was refined and simplified using ChatGPT.
+
+- The ArduCam OV2640 Module requires CS, MOSI, MISO, SCLK pins for SPI connection, and SDA, SCL pins for I2C connection. This project modified the source code of ArduCam to use SPI1.
+
+    - SPI1 configuration for ArduCam OV2640:
+      - CS --> GPIO 13
+      - MOSI --> GPIO 11
+      - MISO --> GPIO 12
+      - SCLK --> GPIO 10
+
+    - I2C configuration for ArduCam OV2640:
+      - SDA --> GPIO 8
+      - SCL --> GPIO 9
+
 
 ## 4. YOLOv8 Model Training
 
@@ -71,9 +84,23 @@ pip install ultralytics
 - Inference:
     ![image](https://github.com/dbtjr1103/W5100S-EVB-PICO-WORKINGASSISTANT/assets/115054808/1ce25d84-259e-40f8-9236-a4ff644a181e)
 
+## 5. Inference to Web
+- Run the `working_assistant.py` file.
+- Code Explanation:
 
-## 5. Original Link
+    - **Setup**: The script first sets up a Flask application and defines some global variables. `url` is the URL from which images are fetched. `save_dir` is the directory where fetched images are saved. `inference_dir` is the directory where images after inference are saved. `results` is a dictionary that keeps track of the count of different object detection results.
+
+    - **fetch_image_and_inference()**: This function runs in an infinite loop. In each iteration, it fetches an image from the URL, saves it to the `save_dir`, runs a YOLO object detection model on the image, and updates the `results` dictionary based on the output of the model. The function then waits for 10 seconds before starting the next iteration.
+
+    - **serve_image()**: This is a Flask route that serves an HTML page. The page contains an image element that displays the latest inferred image and several paragraph elements that display the counts of different object detection results. The page refreshes every 10 seconds.
+
+    - **get_inferred_image()**: This is another Flask route that serves the latest inferred image. The image is fetched from the `inference_dir`.
+
+    - **Main Execution**: If the script is run as the main program, it starts the `fetch_image_and_inference()` function in a new thread and then starts the Flask application.
+
+
+## 6. Original Link
 - For more information, please visit the [original project page](https://maker.wiznet.io/Benjamin/projects/working-assistant-with-w5100s-evb-pico/?serob=4&serterm=month).
 
-## 6. Similar Projects
+## 7. Similar Projects
 - For other similar projects, please visit [Upscaling image with AI using W5100S-EVB-Pico and Arducam](https://maker.wiznet.io/Benjamin/projects/upscaling-image-with-ai-using-w5100s-evb-pico-and-arducam/).
